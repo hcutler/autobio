@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Timeline</title>
+  <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,800,700,900' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300' rel='stylesheet' type='text/css'>
+
+  <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+  <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+  <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/fonts/font.abril-droidsans.css">
+
+  
+
+
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+<!--   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+ -->
+
+
+    <script type="text/javascript">
+
+      // Create new Timeline object
+      var options = {
+        hash_bookmark: false,
+        initial_zoom: 5
+      }
+
+
+      // The TL.Timeline constructor takes at least two arguments:
+      // the id of the Timeline container (no '#'), and
+      // the URL to your JSON data file or Google spreadsheet.
+      // the id must refer to an element "above" this code,
+      // and the element must have CSS styling to give it width and height
+      // optionally, a third argument with configuration options can be passed.
+      // See below for more about options.
+      var timeline = new TL.Timeline('timeline-embed',
+                                     'https://docs.google.com/spreadsheets/d/1cWqQBZCkX9GpzFtxCWHoqFXCHg-ylTVUWlnrdYMzKUI/pubhtml',
+                                     options);
+
+      // Set event handlers
+      // event_name = string, name of the event, e.g. "change"
+      // data = JavaScript object containing event-specific properties listed below
+      timeline.on(event_name, function(data) {
+          // handle event
+      });
+
+
+      var timeline_json = make_the_json(); // you write this part
+      // two arguments: the id of the Timeline container (no '#')
+      // and the JSON object or an instance of TL.TimelineConfig created from
+      // a suitable JSON object
+      window.timeline = new TL.Timeline('timeline-embed', timeline_json);
+
+
+      var additionalOptions = {
+            start_at_end: true,
+            default_bg_color: {r:0, g:0, b:0},
+            timenav_height: 250
+          }
+
+        timeline = new TL.Timeline('timeline-embed',
+        'https://docs.google.com/spreadsheets/d/1cWqQBZCkX9GpzFtxCWHoqFXCHg-ylTVUWlnrdYMzKUI/pubhtml',
+        additionalOptions);
+
+
+
+
+
+    </script>
+
+
+
+    <style type="text/css">
+    h3 {
+      text-align: center;
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+
+<body>
+  <!-- simple nav bar -->
+  <nav class="navbar navbar-custom">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <ul>
+      <div class="navbar-left" style="position:relative;left:10px">
+
+        <li><a href="form.html">Create timeline</a></li>
+        <li><a href="index.html">View timeline <span class=""></span></a></li>
+      </div>
+    </ul>
+  </nav>
+
+
+
+  <br>
+<br>
+<br>
+<!-- <b><h4 style="text-align:center">Sample timeline</h4></b> -->
+
+
+<div id='timeline-embed' style="width: 100%; height: 600px">
+  <center>
+   <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=177i_Ca0jpV3W7EQLGzbxQlLlRPF4DG-Wybb590qt27I&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' frameborder='0'></iframe>
+  </center>
+
+</div>
+<br>
+
+
+
+
+  <div class="social">
+  </div>
+
+  <br>
+  <br>
+
+  <br>
+
+
+</body>
+</html>
